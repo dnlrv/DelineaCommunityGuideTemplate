@@ -1,0 +1,374 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\NeedsTeXFormat{LaTeX2e}
+%\ProvidesClass{EndofEngagementReport}[Professional Services End of Engagement Report Template, v1.0]
+%\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % Pass through any options to the base class
+\ProcessOptions\relax % Process given options
+%\LoadClass{article} % Load the base class
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{wallpaper}
+\usepackage[utf8]{inputenc}
+\usepackage{bookmark}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{helvet}
+\usepackage{titling}
+\usepackage{url}
+\usepackage{fvextra}
+\usepackage[nottoc]{tocbibind}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{hdcolor}{RGB}{35,20,86}
+\definecolor{bgcolor}{RGB}{32,12,87}
+\definecolor{stgreen}{RGB}{78,172,91}
+\definecolor{styellow}{RGB}{255,253,84}
+\definecolor{stred}{RGB}{177,35,24}
+%\definecolor{delineablue}{rgb}{0.14,0.08,0.33}
+%\definecolor{darkblue}{rgb}{0.14,0.08,0.33}
+\pagestyle{fancy}
+\fancyhead[RO,RE]{\rightmark}
+\fancyhead[LE,LO]{\leftmark}
+\fancyfoot[RE,RO]{\thepage}
+\fancyfoot[CE,CO]{}
+\fancyfoot[LE,LO]{\tiny{\copyright \, 2022-\the\year{} Delinea.\newline All Rights Reserved.}}
+\ThisULCornerWallPaper{1}{src/dheader.jpg}
+\LRCornerWallPaper{1}{src/dfooter.jpg}
+\pretitle{\begin{center} \includegraphics[width=4in]{src/Delinea.jpg}\LARGE\\}
+\posttitle{\end{center}}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Delinea Community Reference Guide},
+  pdfauthor={Delinea Professional Services},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Delinea Community Reference Guide}
+\author{Delinea Professional Services}
+\date{2022-09-07}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+This Community Guide, written in Bookdown, is intended for Delinea Professional Services and their customers to assist with unique tasks or ``how-tos'' that are not covered in official training. Articles are written by Delinea Professional Services consultants and architects from real-world experiences so it should serve as a great resource for everyone.
+
+In addition to being an online resource, this format will also be exported into a .pdf file for offline viewing.
+
+\hypertarget{how-to-add-an-article}{%
+\section{How to add an article}\label{how-to-add-an-article}}
+
+This section will describe the process to create the file and folder structure needed to contribute an article to the project.
+
+\hypertarget{filefolder-structure}{%
+\subsection{File/Folder Structure}\label{filefolder-structure}}
+
+To contribute an article, create a folder named after your article. Then convert the name of the folder to lowercase and replace all spaces with a hyphen \texttt{-}. For example, if your article name is \texttt{How\ to\ install\ XYZ}, then the folder should be named \texttt{how-to-install-xyz}.
+
+Inside that folder, create a new RMarkdown \texttt{.Rmd} file. This file should also follow the same naming convention mentioned above. Continuing with the same example, if your article name is \texttt{How\ to\ install\ XYZ}, then the RMarkdown file should be named \texttt{how-to-install-xyz.Rmd}.
+
+This should create a file/folder structure that looks like the following:
+
+\texttt{how-to-install-xyz\textbackslash{}how-to-install-xyz.Rmd}
+
+This is the bare minimum needed for a proper article contribution to this project. Any supporting graphics or other files should also go into this folder. Supporting files do not need to follow this special naming convention.
+
+\hypertarget{rmarkdown-file-structure}{%
+\subsection{RMarkdown File Structure}\label{rmarkdown-file-structure}}
+
+The RMarkdown file needs to follow a simple format for proper inclusion into the project. There just needs to be a single, level 1 header \texttt{\#} at the top of the document. You can use standard Markdown or RMarkdown syntax for whatever you wish to document. Continuing with the same example from above, the .Rmd file should look like the following:
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{\# How to install XYZ}
+
+\NormalTok{This article is to show how to install XYZ.}
+
+\NormalTok{\#\# Step 1}
+
+\NormalTok{This is a second level header for my article.}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{including-graphics}{%
+\subsection{Including Graphics}\label{including-graphics}}
+
+While Markdown has a syntax for inserting graphics, it is recommended to use the following to ensure full compatibility with both web and pdf forms of this Bookdown project.
+
+To insert fully compatible graphics, the following syntax should be used; continuing from our earlier example:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r echo=FALSE, fig.cap="Graphic Caption", out.width = \textquotesingle{}75\%\textquotesingle{}, fig.align=\textquotesingle{}center\textquotesingle{}, fig.pos = \textquotesingle{}H\textquotesingle{}\}}
+\NormalTok{knitr::include\_graphics("articles/how{-}to{-}install{-}xyz/Example Graphic.png")}
+\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{updating-_bookdown.yml}{%
+\subsection{Updating \_bookdown.yml}\label{updating-_bookdown.yml}}
+
+Once all the files for your article are in the proper format, there needs to be a change to the base \texttt{\_bookdown.yml} file in the root project folder. This file controls meta data about the Bookdown's project structure.
+
+The part that needs to be updated is a line for the property \texttt{rmd\_files}. This array controls the listing of the Rmd articles in order as it appears in this array. For example, let's take a look at a basic version of the property with just the index.Rmd file and another article.
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,firstnumber=11,]
+\NormalTok{rmd\_files: [}
+\NormalTok{  "index.Rmd",}
+\NormalTok{  "articles/how{-}to{-}configure{-}abc/how{-}to{-}configure{-}abc.Rmd"}
+\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+To include your article in the Bookdown project, simply add a line to this file, separated by a comma and included in quotes. To continue from our earlier example, the following is adding the ``How to Install XYZ'' article into this property:
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,firstnumber=11,]
+\NormalTok{rmd\_files: [}
+\NormalTok{  "index.Rmd",}
+\NormalTok{  "articles/how{-}to{-}configure{-}abc/how{-}to{-}configure{-}abc.Rmd",}
+\NormalTok{  "articles/how{-}to{-}install{-}xyz/how{-}to{-}install{-}xyz.Rmd"}
+\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+Once these changes are made to \texttt{\_bookdown.yml}, submit these changes as a pull request to the Bookdown project. Once these changes are merged your article should now appear as part of the project.
+
+\hypertarget{bookdown-code-samples}{%
+\chapter{Bookdown Code Samples}\label{bookdown-code-samples}}
+
+This article describes some code examples to handling formating of special objects like images and tables as part of this Bookdown project:
+
+\hypertarget{code-blocks}{%
+\section{Code Blocks}\label{code-blocks}}
+
+Code blocks should be displayed as the following:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textasciitilde{}\textasciitilde{}\textasciitilde{}\{.lineAnchors .numberLines startFrom="350"\}}
+\NormalTok{Code can go here}
+\NormalTok{The .lineAnchors option makes code carriage return if the text is too long on one line for .pdfs.}
+\NormalTok{The .numberLines option enables line numbers}
+\NormalTok{The startFrom="350" options makes line numbers start with 350}
+\NormalTok{\textasciitilde{}\textasciitilde{}\textasciitilde{}}
+\end{Highlighting}
+\end{Shaded}
+
+The following is the above block as fully rendered:
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,firstnumber=350,]
+\NormalTok{Code can go here}
+\NormalTok{The .lineAnchors option makes code carriage return if the text is too long on one line for .pdfs.}
+\NormalTok{The .numberLines option enables line numbers}
+\NormalTok{The startFrom="350" options makes line numbers start with 350}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{images}{%
+\section{Images}\label{images}}
+
+Images needs to list the full path from the root project folder. Additional details such as positioning can be controlled via the R code block.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r echo=FALSE, fig.cap="Graphic Caption", out.width = \textquotesingle{}75\%\textquotesingle{}, fig.align=\textquotesingle{}center\textquotesingle{}, fig.pos = \textquotesingle{}H\textquotesingle{}\}}
+\NormalTok{knitr::include\_graphics("articles/how{-}to{-}install{-}xyz/Example Graphic.png")}
+\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{tables}{%
+\section{Tables}\label{tables}}
+
+While Markdown has simpler syntax for tables, the following should be used for table data to ensure full compatibility with both web and pdf versions of this Bookdown project:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r echo=FALSE, message=FALSE, warning=FALSE, results=\textquotesingle{}asis\textquotesingle{}\}}
+\NormalTok{\# header row is first}
+\NormalTok{tabledata = "Version Number,Date,Author,Description}
+\NormalTok{1.0,08/02/2022,YOURNAME,Initial version}
+\NormalTok{"}
+\NormalTok{\# read the above text as a csv file}
+\NormalTok{thistable \textless{}{-} read.csv(text = tabledata, header=TRUE, check.names=FALSE)}
+\NormalTok{\# turn it into a kable table}
+\NormalTok{kbl(thistable, align = "c", caption = "Version History") \%\textgreater{}\% \# name of table}
+\NormalTok{  kable\_styling(latex\_options = c("striped", "responsive")) \%\textgreater{}\%}
+\NormalTok{  column\_spec(1, border\_left = T) \%\textgreater{}\% \# column 1 for border left line}
+\NormalTok{  column\_spec(4, border\_right = T) \%\textgreater{}\% \# last column for border right line}
+\NormalTok{  row\_spec(0, bold = T, background = "\#241556", color = "white")}
+\NormalTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
+\end{Highlighting}
+\end{Shaded}
+
+This method already includes Delinea's color branding.
+
+This code block uses the \texttt{kable} package to design and build the table. Essentially, the tabledata shown above is treated as a String object, which is then read as a .csv. The \texttt{kbl} function then turns that csv into the table.
+
+Check out (\url{https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html}) for all kinds of options.
+
+The following is the example code block from above:\newline
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-5}Version History}
+\centering
+\begin{tabular}[t]{|>{}c|c|c|>{}c|}
+\hline
+\cellcolor[HTML]{241556}{\textcolor{white}{\textbf{Version Number}}} & \cellcolor[HTML]{241556}{\textcolor{white}{\textbf{Date}}} & \cellcolor[HTML]{241556}{\textcolor{white}{\textbf{Author}}} & \cellcolor[HTML]{241556}{\textcolor{white}{\textbf{Description}}}\\
+\hline
+\cellcolor{gray!6}{1} & \cellcolor{gray!6}{08/02/2022} & \cellcolor{gray!6}{YOURNAME} & \cellcolor{gray!6}{Initial version}\\
+\hline
+\end{tabular}
+\end{table}
+
+\hypertarget{how-to-install-xyz}{%
+\chapter{How to install XYZ}\label{how-to-install-xyz}}
+
+This is how you install XYZ.
+
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.75\linewidth]{articles/how-to-install-xyz/Example Graphic} 
+
+}
+
+\caption{Face}\label{fig:unnamed-chunk-7}
+\end{figure}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}

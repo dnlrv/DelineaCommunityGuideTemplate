@@ -1,0 +1,13 @@
+tab:unnamed-chunk-5
+fig:unnamed-chunk-7
+introduction
+how-to-add-an-article
+filefolder-structure
+rmarkdown-file-structure
+including-graphics
+updating-_bookdown.yml
+bookdown-code-samples
+code-blocks
+images
+tables
+how-to-install-xyz

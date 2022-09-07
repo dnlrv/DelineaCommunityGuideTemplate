@@ -1,0 +1,14 @@
+book_filename: "pscommunity"
+output_dir: "docs"
+delete_merged_file: true
+language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
+  ui:
+    edit: "Edit"
+rmd_subdir: true
+rmd_files: [
+  "index.Rmd",
+  "articles/how-to-install-xyz/how-to-install-xyz.Rmd"
+]

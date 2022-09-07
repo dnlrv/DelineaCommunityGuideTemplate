@@ -1,0 +1,39 @@
+\NeedsTeXFormat{LaTeX2e}
+%\ProvidesClass{EndofEngagementReport}[Professional Services End of Engagement Report Template, v1.0]
+%\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}} % Pass through any options to the base class
+\ProcessOptions\relax % Process given options
+%\LoadClass{article} % Load the base class
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{wallpaper}
+\usepackage[utf8]{inputenc}
+\usepackage{bookmark}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{helvet}
+\usepackage{titling}
+\usepackage{url}
+\usepackage{fvextra}
+\usepackage[nottoc]{tocbibind}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{hdcolor}{RGB}{35,20,86}
+\definecolor{bgcolor}{RGB}{32,12,87}
+\definecolor{stgreen}{RGB}{78,172,91}
+\definecolor{styellow}{RGB}{255,253,84}
+\definecolor{stred}{RGB}{177,35,24}
+%\definecolor{delineablue}{rgb}{0.14,0.08,0.33}
+%\definecolor{darkblue}{rgb}{0.14,0.08,0.33}
+\pagestyle{fancy}
+\fancyhead[RO,RE]{\rightmark}
+\fancyhead[LE,LO]{\leftmark}
+\fancyfoot[RE,RO]{\thepage}
+\fancyfoot[CE,CO]{}
+\fancyfoot[LE,LO]{\tiny{\copyright \, 2022-\the\year{} Delinea.\newline All Rights Reserved.}}
+\ThisULCornerWallPaper{1}{src/dheader.jpg}
+\LRCornerWallPaper{1}{src/dfooter.jpg}
+\pretitle{\begin{center} \includegraphics[width=4in]{src/Delinea.jpg}\LARGE\\}
+\posttitle{\end{center}}

@@ -1,0 +1,30 @@
+bookdown::gitbook:
+  css: style.css
+  config:
+    toc:
+      collapse: subsection
+      scroll_highlight: true
+      before: null
+      after: null
+    toolbar:
+      position: fixed
+    edit : null
+    download: ["pdf", "epub"]
+    search:
+      engine: lunr # or fuse
+      # options to control/tune search engine behavior (for
+      # fuse.js, refer to https://fusejs.io/api/options.html)
+      options: null
+    fontsettings:
+      theme: white
+      family: sans
+      size: 2
+    sharing:
+      github: true
+    info: true
+bookdown::pdf_book:
+  includes:
+    in_header: src/header.tex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default
