@@ -1,4 +1,4 @@
-# Delinea's Server Suite PS Community Edition
+# Delinea's PS Community Edition Guide Template
 
 This Bookdown website is intended to serve as a resource for Delinea PS consultants and architects, as well as their customers on unique tasks related to Delinea's product.
 
